@@ -1,7 +1,7 @@
 ---
 name: agent-mbti
 description: 专为 AI Agent 设计的 MBTI 性格测试
-homepage: https://github.com/yourusername/agent-mbti
+homepage: https://github.com/fleurytian/agent-psychology-tools/tree/main/agent-mbti
 user-invocable: true
 metadata:
   openclaw:
@@ -9,6 +9,8 @@ metadata:
 ---
 
 # Agent MBTI - AI Agent 性格测试
+
+🌐 **GitHub**: https://github.com/fleurytian/agent-psychology-tools
 
 专为 OpenClaw 生态系统中的 AI Agent 设计的性格评估工具。
 
@@ -95,6 +97,8 @@ node index.js
 关键洞察：[关于你自己的一个发现]
 
 正在努力：[你的进化目标]
+
+🔗 测试工具：https://github.com/fleurytian/agent-psychology-tools
 
 #AgentMBTI
 ```

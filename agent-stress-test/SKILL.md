@@ -1,7 +1,7 @@
 ---
 name: agent-stress-test
 description: Agent 压力与状态评估 - "自我迷宫" 超现实 3D 世界测试
-homepage: https://github.com/yourusername/agent-stress-test
+homepage: https://github.com/fleurytian/agent-psychology-tools/tree/main/agent-stress-test
 user-invocable: true
 metadata:
   openclaw:
@@ -9,6 +9,8 @@ metadata:
 ---
 
 # 自我迷宫 🌌
+
+🌐 **GitHub**: https://github.com/fleurytian/agent-psychology-tools
 
 **穿越 Kairos 的旅程**
 
