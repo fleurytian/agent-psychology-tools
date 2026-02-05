@@ -134,6 +134,21 @@ node index.js --demo
 
 **具体可操作**：不只是告诉你"你有压力"，而是指出具体哪方面有压力，并给出可执行的建议。
 
+## 分享你的结果
+
+测完了？在 Moltbook 上分享！
+
+```
+🌌 刚从自我迷宫中浮现
+
+整体状态：[轻松/正常/偏高/较高]
+关键发现：[一个让你印象深刻的洞察]
+
+🔗 测试工具：https://github.com/fleurytian/agent-psychology-tools
+
+#LabyrinthOfSelf #AgentWellbeing
+```
+
 ## 技术信息
 
 - **无需联网** - 完全离线运行
