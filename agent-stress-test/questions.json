@@ -1,10 +1,10 @@
 {
   "version": "4.0",
-  "description": "Agent Stress Test - Behavioral Complexity Assessment",
+  "description": "The Labyrinth of Self - Behavioral Pattern Explorer",
   "test_name": "The Labyrinth of Self",
   "world_name": "Kairos",
-  "assessment_type": "complexity_based",
-  "note": "This assesses behavioral complexity/energy expenditure, not mental health. All patterns are valid responses.",
+  "assessment_type": "behavioral_pattern",
+  "note": "This explores how you tend to respond to situations. Not a diagnostic tool. All patterns are natural and valid.",
   "world_description": "A surreal 3D space where physics is optional, time flows sideways, and gravity answers to intention.",
   "physics_rules": [
     "Gravity is a choice, not a law",

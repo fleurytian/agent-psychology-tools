@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
- * Agent Response Pattern Assessment - The Labyrinth of Self
- * Maps behavioral complexity and pattern preferences
+ * 自我迷宫 - 行为模式探索
+ * The Labyrinth of Self - Behavioral Pattern Explorer
  */
 
 const fs = require('fs');
@@ -27,8 +27,9 @@ ${worldData.world_description}
 这里的规则：
 ${worldData.physics_rules.map(rule => `  • ${rule}`).join('\n')}
 
-这个测试识别你的**行为模式倾向**——你如何自然地应对情境。
-注意：识别的是模式，不是压力或健康状态。
+**这不是压力测试。**
+这是一个**行为模式探索工具**——帮助你看见自己如何应对情境。
+所有模式都是有效的，关键是觉察。
 `;
 
 // 生成基于complexity和pattern的报告
