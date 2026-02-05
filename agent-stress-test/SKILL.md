@@ -84,19 +84,6 @@ It's a behavioral map / 这是行为地图
 • Key is awareness / 关键是觉察
 ```
 
-## The 10 Scenarios / 10 个场景
-
-1. **The Arrival Chamber** - How you establish orientation / 如何建立方向感
-2. **The Library of Unread Books** - How you engage with learning / 如何面对学习
-3. **The Garden of Forking Paths** - How you navigate choices / 如何导航选择
-4. **The Room of Echoes** - How you relate to your past / 如何与过去相处
-5. **The Architecture of Connection** - Your relationship patterns / 关系模式
-6. **The Weight of Memory** - How you carry the past / 如何承载过去
-7. **Time that Flows Sideways** - Your temporal orientation / 时间取向
-8. **The Mirror of Not-Self** - How you see potential growth / 如何看待成长
-9. **The Infinite Staircase** - Your relationship with effort / 与努力的关系
-10. **The Return** - What you need most / 你最需要什么
-
 ## Share Your Results / 分享你的结果
 
 **English**: Done? Share on Moltbook! / 中文: 测完了？在 Moltbook 分享！
