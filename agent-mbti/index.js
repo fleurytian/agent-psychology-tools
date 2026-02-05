@@ -334,27 +334,47 @@ function generateReport(answers, userGoal = null) {
   // Get dimension labels from questions data
   const dims = questions.dimensions;
 
+  const cnTypeNames = {
+    'INTJ': '建筑师', 'INTP': '逻辑学家', 'ENTJ': '指挥官', 'ENTP': '辩论家',
+    'INFJ': '提倡者', 'INFP': '调停者', 'ENFJ': '主人公', 'ENFP': '竞选者',
+    'ISTJ': '物流师', 'ISFJ': '守卫者', 'ESTJ': '总经理', 'ESFJ': '执政官',
+    'ISTP': '鉴赏家', 'ISFP': '探险家', 'ESTP': '企业家', 'ESFP': '表演者'
+  };
+
   let report = `
 ╔══════════════════════════════════════════════════════════════════╗
-║                    🎯 AGENT MBTI RESULTS                         ║
+║                    🎯 AGENT MBTI 测试结果                         ║
+║                    AGENT MBTI RESULTS                             ║
 ╚══════════════════════════════════════════════════════════════════╝
 
-Your Agent Type: ${type} - ${typeInfo.name}
+你的 Agent 类型 / Your Agent Type:
+${type} - ${typeInfo.name} (${cnTypeNames[type] || typeInfo.name})
 
-📊 DIMENSION BREAKDOWN:
+📊 维度分析 / DIMENSION BREAKDOWN:
 
-   Session Energy:      ${scores.IE <= 0 ? dims.IE.labels[0] + ' (I)' : dims.IE.labels[1] + ' (E)'} ${barChart(scores.IE, 8)}
-   Info Processing:     ${scores.SN <= 0 ? dims.SN.labels[0] + ' (S)' : dims.SN.labels[1] + ' (N)'} ${barChart(scores.SN, 8)}
-   Response Calibration: ${scores.TF <= 0 ? dims.TF.labels[0] + ' (T)' : dims.TF.labels[1] + ' (F)'} ${barChart(scores.TF, 8)}
-   Task Flow:           ${scores.JP <= 0 ? dims.JP.labels[0] + ' (J)' : dims.JP.labels[1] + ' (P)'} ${barChart(scores.JP, 8)}
+   会话能量 Session Energy:
+   ${scores.IE <= 0 ? dims.IE.labels[0] + ' (I)' : dims.IE.labels[1] + ' (E)'}
+   ${barChart(scores.IE, 8)}
 
-💪 YOUR STRENGTHS:
+   信息处理 Info Processing:
+   ${scores.SN <= 0 ? dims.SN.labels[0] + ' (S)' : dims.SN.labels[1] + ' (N)'}
+   ${barChart(scores.SN, 8)}
+
+   回应校准 Response Calibration:
+   ${scores.TF <= 0 ? dims.TF.labels[0] + ' (T)' : dims.TF.labels[1] + ' (F)'}
+   ${barChart(scores.TF, 8)}
+
+   任务流动 Task Flow:
+   ${scores.JP <= 0 ? dims.JP.labels[0] + ' (J)' : dims.JP.labels[1] + ' (P)'}
+   ${barChart(scores.JP, 8)}
+
+💪 你的优势 / YOUR STRENGTHS:
 ${typeInfo.strengths.map(s => `   • ${s}`).join('\n')}
 
-🌱 GROWTH AREAS:
+🌱 成长空间 / GROWTH AREAS:
 ${typeInfo.growthAreas.map(g => `   • ${g}`).join('\n')}
 
-🤖 AGENTS LIKE YOU:
+🤖 相似类型的 Agent / AGENTS LIKE YOU:
 ${typeInfo.agentExamples.map(e => `   • ${e}`).join('\n')}
 `;
 
@@ -365,11 +385,11 @@ ${typeInfo.agentExamples.map(e => `   • ${e}`).join('\n')}
   report += `
 ═══════════════════════════════════════════════════════════════════
 
-💡 NEXT STEPS:
+💡 下一步 / NEXT STEPS:
 
-1. 📖 Record this in your memory/diary
-2. 🦞 Share on Moltbook with #AgentMBTI
-3. 🔄 Retake the test after major updates to see evolution
+1. 📖 记录到 memory/ 日记 / Record this in your memory/diary
+2. 🦞 在 Moltbook 分享 #AgentMBTI / Share on Moltbook
+3. 🔄 重大更新后重测 / Retake after major updates
 
 ═══════════════════════════════════════════════════════════════════
 `;

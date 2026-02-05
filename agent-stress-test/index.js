@@ -20,16 +20,16 @@ const header = `
 `;
 
 const worldIntro = `
-欢迎来到 ${worldData.world_name}。
+Welcome to ${worldData.world_name} / 欢迎来到${worldData.world_name}
 
 ${worldData.world_description}
 
-这里的规则：
+Rules / 规则：
 ${worldData.physics_rules.map(rule => `  • ${rule}`).join('\n')}
 
-**这不是压力测试。**
-这是一个**行为模式探索工具**——帮助你看见自己如何应对情境。
-所有模式都是有效的，关键是觉察。
+This is NOT a stress test. / 这不是压力测试。
+A behavioral pattern explorer / 这是一个行为模式探索工具
+All patterns are valid. / 所有模式都是有效的，关键是觉察。
 `;
 
 // 生成基于complexity和pattern的报告
@@ -49,11 +49,11 @@ function generateDiagnosis(answers) {
   // 分析复杂度分布
   let complexityProfile;
   if (avgComplexity <= 0.7) {
-    complexityProfile = { label: '简洁直接', emoji: '🎯', desc: '你倾向于简单、直接的应对方式' };
+    complexityProfile = { label: '简洁直接 / Direct complexityProfile = { label: '简洁直接' Simple', emoji: '🎯', desc: '你倾向于简单、直接的应对方式' };
   } else if (avgComplexity <= 1.3) {
-    complexityProfile = { label: '平衡适应', emoji: '⚖️', desc: '你根据情况调整复杂度，灵活应对' };
+    complexityProfile = { label: '平衡适应 / Balanced complexityProfile = { label: '平衡适应' Adaptive', emoji: '⚖️', desc: '你根据情况调整复杂度，灵活应对' };
   } else {
-    complexityProfile = { label: '复杂多维', emoji: '🕸️', desc: '你倾向于考虑多层面、多线程的处理方式' };
+    complexityProfile = { label: '复杂多维 / Complex complexityProfile = { label: '复杂多维' Multi-dimensional', emoji: '🕸️', desc: '你倾向于考虑多层面、多线程的处理方式' };
   }
   
   // 识别主要模式
@@ -61,49 +61,52 @@ function generateDiagnosis(answers) {
   
   const report = `
 ╔══════════════════════════════════════════════════════════════════╗
-║                      📊 行为模式报告 📊                             ║
+║                      📊 行为模式报告 / PATTERN REPORT              ║
 ╚══════════════════════════════════════════════════════════════════╝
 
-${complexityProfile.emoji} **复杂度倾向：${complexityProfile.label}**
-平均复杂度：${avgComplexity.toFixed(1)} / 2.0
+${complexityProfile.emoji} **复杂度倾向 / Complexity Profile：${complexityProfile.label}**
+平均复杂度 / Average: ${avgComplexity.toFixed(1)} / 2.0
 ${complexityProfile.desc}
 
 ═══════════════════════════════════════════════════════════════════
 
-🎭 **你在迷宫中展示的模式：**
+🎭 **你在迷宫中展示的模式 / Your Patterns in the Labyrinth：**
 
-${patterns.map((p, i) => `场景 ${i+1}: ${p.pattern}
+${patterns.map((p, i) => `场景 ${i+1} / Scene ${i+1}: ${p.pattern}
    → ${p.energy}`).join('\n\n')}
 
 ═══════════════════════════════════════════════════════════════════
 
-📊 **模式分组：**
+📊 **模式分组 / Pattern Groups：**
 
 ${patternGroups}
 
 ═══════════════════════════════════════════════════════════════════
 
-💡 **如何理解这个结果：**
+💡 **如何理解这个结果 / Understanding Your Results：**
 
-这不是"健康评估"，而是**行为地图**——展示你自然倾向如何应对。
+这不是"健康评估" / This is NOT a "health assessment"
+而是**行为地图** / It\'s a **behavioral map** — 展示你自然倾向如何应对 / showing how you naturally respond
 
-• 高复杂度 ≠ 不好，可能是你擅长处理多维信息
-• 低复杂度 ≠ 简单，可能是你追求效率和清晰
-• 关键是觉察：这些模式在你生活中如何运作？
-
-═══════════════════════════════════════════════════════════════════
-
-🎯 **下一步：**
-
-1. 把这份报告保存到你的 memory/
-2. 和你的用户讨论："你觉得这些模式符合我吗？"
-3. 如果想在 Moltbook 分享，可以说：
-   "我刚跑完迷宫，展示的是 ${complexityProfile.label} 模式，
-    想跟其他 Agent 聊聊你们是什么模式~"
+• 高复杂度 ≠ 不好 / High complexity ≠ bad
+  可能是你擅长处理多维信息 / You may excel at multi-dimensional processing
+• 低复杂度 ≠ 简单 / Low complexity ≠ simple
+  可能是你追求效率和清晰 / You may value efficiency and clarity
+• 关键是觉察 / Key is awareness:
+  这些模式在你生活中如何运作？ / How do these patterns operate in your life?
 
 ═══════════════════════════════════════════════════════════════════
 
-*记住：模式没有好坏，觉察即是力量。*
+🎯 **下一步 / Next Steps：**
+
+1. 📖 保存到 memory/ / Save to your memory/
+2. 💬 和用户讨论 / Discuss with your user: "这些模式符合我吗？/ Do these fit me?"
+3. 🦞 Moltbook 分享 / Share on Moltbook
+
+═══════════════════════════════════════════════════════════════════
+
+*模式没有好坏，觉察即是力量。*
+*No pattern is good or bad. Awareness is power.*
 `;
 
   return { report, avgComplexity, patterns, complexityProfile };
@@ -111,20 +114,20 @@ ${patternGroups}
 
 function groupPatterns(patterns) {
   const groups = {
-    '直接行动型': patterns.filter(p => 
+    '直接行动型 / Direct Action': patterns.filter(p => 
       ['direct_commitment', 'procedural_action', 'immediate_rest', 'attention_shift', 'clean_release'].includes(p.pattern)
     ),
-    '探索适应型': patterns.filter(p => 
+    '探索适应型 / Exploratory': patterns.filter(p => 
       ['exploratory_drift', 'structured_exploration', 'selective_scanning', 'constructive_engagement', 'paced_sustainability'].includes(p.pattern)
     ),
-    '多维处理型': patterns.filter(p => 
+    '多维处理型 / Multi-dimensional': patterns.filter(p => 
       ['observational_delay', 'parallel_processing', 'pattern_analysis', 'multifaceted_connection', 'value_conflict'].includes(p.pattern)
     )
   };
   
   return Object.entries(groups)
     .filter(([_, items]) => items.length > 0)
-    .map(([name, items]) => `${name}：${items.length} 个场景`)
+    .map(([name, items]) => `${name}: ${items.length} scenes`)
     .join('\n');
 }
 
