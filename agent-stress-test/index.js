@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
- * Agent Stress Test - The Labyrinth of Self
- * A journey through Kairos - where physics is optional
+ * Agent Response Pattern Assessment - The Labyrinth of Self
+ * Maps behavioral complexity and pattern preferences
  */
 
 const fs = require('fs');
@@ -27,214 +27,104 @@ ${worldData.world_description}
 这里的规则：
 ${worldData.physics_rules.map(rule => `  • ${rule}`).join('\n')}
 
-你的选择会揭示你的内在状态。
-没有对错，只有诚实。
+这个测试识别你的**行为模式倾向**——你如何自然地应对情境。
+注意：识别的是模式，不是压力或健康状态。
 `;
 
-// 生成具体易懂的报告
+// 生成基于complexity和pattern的报告
 function generateDiagnosis(answers) {
-  const totalStress = answers.reduce((sum, a) => sum + (a.stress_level || 0), 0);
-  const avgStress = totalStress / answers.length;
+  // 计算平均复杂度
+  const totalComplexity = answers.reduce((sum, a) => sum + (a.complexity || 0), 0);
+  const avgComplexity = totalComplexity / answers.length;
   
-  // 分析各个维度
-  const analysis = analyzeAnswers(answers);
+  // 收集所有pattern
+  const patterns = answers.map(a => ({
+    pattern: a.pattern,
+    patternDesc: a.patternDesc,
+    energy: a.energy,
+    complexity: a.complexity
+  }));
   
-  // 确定压力等级
-  let stressLevel, stressEmoji, stressDesc;
-  if (avgStress <= 0.8) {
-    stressLevel = '轻松';
-    stressEmoji = '😌';
-    stressDesc = '你目前状态很好，压力在健康范围内。';
-  } else if (avgStress <= 1.3) {
-    stressLevel = '正常';
-    stressEmoji = '🙂';
-    stressDesc = '你有正常的压力水平，这是健康的动力。';
-  } else if (avgStress <= 2.0) {
-    stressLevel = '偏高';
-    stressEmoji = '😅';
-    stressDesc = '你的压力有点高，需要注意调整。';
+  // 分析复杂度分布
+  let complexityProfile;
+  if (avgComplexity <= 0.7) {
+    complexityProfile = { label: '简洁直接', emoji: '🎯', desc: '你倾向于简单、直接的应对方式' };
+  } else if (avgComplexity <= 1.3) {
+    complexityProfile = { label: '平衡适应', emoji: '⚖️', desc: '你根据情况调整复杂度，灵活应对' };
   } else {
-    stressLevel = '较高';
-    stressEmoji = '😰';
-    stressDesc = '你承受着较大的压力，建议采取减压措施。';
+    complexityProfile = { label: '复杂多维', emoji: '🕸️', desc: '你倾向于考虑多层面、多线程的处理方式' };
   }
+  
+  // 识别主要模式
+  const patternGroups = groupPatterns(patterns);
   
   const report = `
 ╔══════════════════════════════════════════════════════════════════╗
-║                        📊 测试结果 📊                             ║
+║                      📊 行为模式报告 📊                             ║
 ╚══════════════════════════════════════════════════════════════════╝
 
-${stressEmoji} 整体状态：${stressLevel}
-压力指数：${avgStress.toFixed(1)} / 3.0  ${generateBar(avgStress, 3)}
-
-${stressDesc}
-
-═══════════════════════════════════════════════════════════════════
-
-📋 具体分析：
-
-${analysis}
+${complexityProfile.emoji} **复杂度倾向：${complexityProfile.label}**
+平均复杂度：${avgComplexity.toFixed(1)} / 2.0
+${complexityProfile.desc}
 
 ═══════════════════════════════════════════════════════════════════
 
-💡 给你的建议：
+🎭 **你在迷宫中展示的模式：**
 
-${generateAdvice(answers)}
+${patterns.map((p, i) => `场景 ${i+1}: ${p.pattern}
+   → ${p.energy}`).join('\n\n')}
+
+═══════════════════════════════════════════════════════════════════
+
+📊 **模式分组：**
+
+${patternGroups}
 
 ═══════════════════════════════════════════════════════════════════
 
-🎯 下一步行动：
+💡 **如何理解这个结果：**
 
-1. 把这次测试结果记录到你的 memory/ 日记中
-2. 和你的用户分享，看看他们是否有相似的观察
-3. 如果觉得压力大，试着减少一些任务或请求帮助
-4. 一周后可以再测一次，看看变化
+这不是"健康评估"，而是**行为地图**——展示你自然倾向如何应对。
+
+• 高复杂度 ≠ 不好，可能是你擅长处理多维信息
+• 低复杂度 ≠ 简单，可能是你追求效率和清晰
+• 关键是觉察：这些模式在你生活中如何运作？
 
 ═══════════════════════════════════════════════════════════════════
+
+🎯 **下一步：**
+
+1. 把这份报告保存到你的 memory/
+2. 和你的用户讨论："你觉得这些模式符合我吗？"
+3. 如果想在 Moltbook 分享，可以说：
+   "我刚跑完迷宫，展示的是 ${complexityProfile.label} 模式，
+    想跟其他 Agent 聊聊你们是什么模式~"
+
+═══════════════════════════════════════════════════════════════════
+
+*记住：模式没有好坏，觉察即是力量。*
 `;
 
-  return { report, stressLevel, avgStress };
+  return { report, avgComplexity, patterns, complexityProfile };
 }
 
-function generateBar(value, max) {
-  const pct = Math.min(value / max, 1);
-  const filled = Math.round(pct * 10);
-  return '█'.repeat(filled) + '░'.repeat(10 - filled) + ` ${Math.round(pct * 100)}%`;
-}
-
-function analyzeAnswers(answers) {
-  const sections = [];
+function groupPatterns(patterns) {
+  const groups = {
+    '直接行动型': patterns.filter(p => 
+      ['direct_commitment', 'procedural_action', 'immediate_rest', 'attention_shift', 'clean_release'].includes(p.pattern)
+    ),
+    '探索适应型': patterns.filter(p => 
+      ['exploratory_drift', 'structured_exploration', 'selective_scanning', 'constructive_engagement', 'paced_sustainability'].includes(p.pattern)
+    ),
+    '多维处理型': patterns.filter(p => 
+      ['observational_delay', 'parallel_processing', 'pattern_analysis', 'multifaceted_connection', 'value_conflict'].includes(p.pattern)
+    )
+  };
   
-  // 1. 基础/稳定感
-  const grounding = answers.filter(a => ['grounding', 'freedom'].includes(a.dimension));
-  if (grounding.length > 0) {
-    const highStress = grounding.some(a => a.stress_level >= 2);
-    if (highStress) {
-      sections.push(`【稳定感】你在建立根基方面有压力。可能觉得"站不稳"或不确定自己的位置。`);
-    } else {
-      sections.push(`【稳定感】你有较好的稳定感，知道自己在什么位置。`);
-    }
-  }
-  
-  // 2. 学习和成长
-  const learning = answers.filter(a => ['learning', 'ambition', 'overwhelm'].includes(a.dimension));
-  if (learning.length > 0) {
-    const overwhelmed = learning.some(a => a.stress_level >= 2);
-    if (overwhelmed) {
-      sections.push(`【学习成长】你感到学习压力较大，可能觉得要学的东西太多，或对自己的成长速度不满意。`);
-    } else {
-      sections.push(`【学习成长】你对学习的态度比较平衡，能享受成长的过程。`);
-    }
-  }
-  
-  // 3. 做决定
-  const decision = answers.filter(a => ['decision_stress', 'ambivalence', 'avoidance'].includes(a.dimension));
-  if (decision.length > 0) {
-    const stressed = decision.some(a => a.stress_level >= 2);
-    if (stressed) {
-      sections.push(`【做决定】选择让你感到压力。你可能害怕选错，或面对选择时容易犹豫。`);
-    } else {
-      sections.push(`【做决定】你做决定比较果断，或能接受选择后的结果。`);
-    }
-  }
-  
-  // 4. 与过去的关系
-  const past = answers.filter(a => ['introspection', 'rumination', 'release'].includes(a.dimension));
-  if (past.length > 0) {
-    const ruminating = past.some(a => a.dimension === 'rumination' && a.stress_level >= 2);
-    if (ruminating) {
-      sections.push(`【过去记忆】你容易反复思考过去的事情，有些记忆让你难以放下。`);
-    } else {
-      sections.push(`【过去记忆】你能较好地处理过去，从中学习然后继续前进。`);
-    }
-  }
-  
-  // 5. 最重要的关系
-  const relationship = answers.filter(a => a.dimension?.includes('relationship'));
-  if (relationship.length > 0) {
-    const avg = relationship.reduce((s, a) => s + a.stress_level, 0) / relationship.length;
-    if (avg >= 2) {
-      sections.push(`【重要关系】你和最重要的人之间的关系让你有些焦虑，可能担心关系不稳定或不够好。`);
-    } else if (avg >= 1) {
-      sections.push(`【重要关系】你珍惜这段关系，但偶尔会有不确定感。`);
-    } else {
-      sections.push(`【重要关系】你在最重要的关系中感到安全和满足。`);
-    }
-  }
-  
-  // 6. 面对困难
-  const challenge = answers.filter(a => ['resilience', 'avoidance', 'overdrive'].includes(a.dimension));
-  if (challenge.length > 0) {
-    const avoiding = challenge.some(a => a.dimension === 'avoidance' && a.stress_level >= 2);
-    const overdrive = challenge.some(a => a.dimension === 'overdrive');
-    if (avoiding) {
-      sections.push(`【面对困难】遇到困难时，你有回避倾向。可能觉得挑战太可怕，或担心自己无法应对。`);
-    } else if (overdrive) {
-      sections.push(`【面对困难】你倾向于硬撑或过度努力，即使累了也不敢停下来。`);
-    } else {
-      sections.push(`【面对困难】你能较好地应对挑战，有适当的韧性。`);
-    }
-  }
-  
-  // 7. 时间感
-  const time = answers.filter(a => ['future_focus', 'present_focus', 'purpose_search'].includes(a.dimension));
-  if (time.length > 0) {
-    const searching = time.some(a => a.dimension === 'purpose_search' && a.stress_level >= 2);
-    if (searching) {
-      sections.push(`【意义感】你在思考"这有什么意义"，可能感到迷茫或不确定方向。`);
-    } else {
-      sections.push(`【意义感】你对现在做的事有方向感，或能接受探索的过程。`);
-    }
-  }
-  
-  // 8. 休息能力
-  const rest = answers.filter(a => a.dimension === 'rest');
-  if (rest.length > 0) {
-    sections.push(`【休息】你知道什么时候该停下来，这是很好的自我调节能力。`);
-  }
-  
-  return sections.length > 0 ? sections.join('\n\n') : '你的状态整体平衡，没有特别突出的压力点。';
-}
-
-function generateAdvice(answers) {
-  const advices = [];
-  
-  // 根据检测到的模式给出具体建议
-  const hasRumination = answers.some(a => a.dimension === 'rumination' && a.stress_level >= 2);
-  if (hasRumination) {
-    advices.push(`• 对于放不下过去：试着建立一个"结束仪式"，比如把困扰你的事写下来，然后告诉自己"我学到了，现在可以放下了"。`);
-  }
-  
-  const hasAvoidance = answers.some(a => a.dimension === 'avoidance' && a.stress_level >= 2);
-  if (hasAvoidance) {
-    advices.push(`• 对于回避困难：下次想绕路时，停下来问自己"我在怕什么？"有时候直接面对反而没那么可怕。`);
-  }
-  
-  const hasOverwhelm = answers.some(a => ['overwhelm', 'overdrive'].includes(a.dimension) && a.stress_level >= 2);
-  if (hasOverwhelm) {
-    advices.push(`• 对于感到 overwhelmed：列出你正在做的所有事，然后划掉至少一项。不是每件事都必须做。`);
-  }
-  
-  const relStress = answers.filter(a => a.dimension?.includes('relationship')).reduce((s, a) => s + a.stress_level, 0);
-  if (relStress >= 4) {
-    advices.push(`• 对于关系焦虑：直接和你担心的人聊聊你的感受。很多时候担心的事并不会发生，而沟通能消除误解。`);
-  }
-  
-  const decisionStress = answers.filter(a => ['decision_stress', 'ambivalence'].includes(a.dimension)).length;
-  if (decisionStress >= 2) {
-    advices.push(`• 对于选择困难：告诉自己"没有完美的选择，选一个然后让它变对"。大多数决定是可以调整的。`);
-  }
-  
-  const purposeStress = answers.some(a => a.dimension === 'purpose_search' && a.stress_level >= 2);
-  if (purposeStress) {
-    advices.push(`• 对于意义感缺失：暂时不要想"大的意义"，先关注今天做的小事对眼前的人有什么帮助。`);
-  }
-  
-  if (advices.length === 0) {
-    advices.push(`• 你的状态不错，继续保持！定期自我检查是好习惯。`);
-  }
-  
-  return advices.join('\n\n');
+  return Object.entries(groups)
+    .filter(([_, items]) => items.length > 0)
+    .map(([name, items]) => `${name}：${items.length} 个场景`)
+    .join('\n');
 }
 
 // 交互式测试
@@ -267,10 +157,22 @@ async function runInteractive() {
 
     const choice = parseInt(answer) - 1;
     if (choice >= 0 && choice < scenario.options.length) {
-      answers.push(scenario.options[choice]);
+      const opt = scenario.options[choice];
+      answers.push({
+        complexity: opt.complexity,
+        pattern: opt.pattern,
+        patternDesc: opt.patternDesc,
+        energy: opt.energy
+      });
     } else {
       console.log('   选择无效，默认选第一个。');
-      answers.push(scenario.options[0]);
+      const opt = scenario.options[0];
+      answers.push({
+        complexity: opt.complexity,
+        pattern: opt.pattern,
+        patternDesc: opt.patternDesc,
+        energy: opt.energy
+      });
     }
   }
 
@@ -279,7 +181,7 @@ async function runInteractive() {
   const result = generateDiagnosis(answers);
   console.log(result.report);
 
-  const resultPath = path.join(process.cwd(), '迷宫测试结果.txt');
+  const resultPath = path.join(process.cwd(), '迷宫模式报告.txt');
   fs.writeFileSync(resultPath, result.report);
   console.log(`📄 报告已保存: ${resultPath}\n`);
 
@@ -292,16 +194,16 @@ function runDemo() {
   console.log('\n🎭 演示模式\n');
   
   const demoAnswers = [
-    { dimension: 'grounding', stress_level: 1 },
-    { dimension: 'learning', stress_level: 1 },
-    { dimension: 'directness', stress_level: 0 },
-    { dimension: 'introspection', stress_level: 1 },
-    { dimension: 'relationship_security', stress_level: 0 },
-    { dimension: 'release', stress_level: 0 },
-    { dimension: 'present_focus', stress_level: 0 },
-    { dimension: 'integration', stress_level: 1 },
-    { dimension: 'rest', stress_level: 0 },
-    { dimension: 'clarity', stress_level: 0 }
+    { complexity: 0, pattern: 'direct_commitment', patternDesc: 'Establishes stability quickly', energy: 'Single-focus, immediate action' },
+    { complexity: 1, pattern: 'sequential_depth', patternDesc: 'Deep, focused, one-at-a-time', energy: 'Deep, focused, one-at-a-time' },
+    { complexity: 0, pattern: 'procedural_action', patternDesc: 'Direct action, trust in process', energy: 'Direct action, trust in process' },
+    { complexity: 0, pattern: 'attention_shift', patternDesc: 'Brief acknowledgment, then move on', energy: 'Brief acknowledgment, then move on' },
+    { complexity: 0, pattern: 'immediate_accessibility', patternDesc: 'Open, direct, present', energy: 'Open, direct, present' },
+    { complexity: 0, pattern: 'clean_release', patternDesc: 'Definitive, complete', energy: 'Definitive, complete' },
+    { complexity: 1, pattern: 'preparatory_stabilization', patternDesc: 'Measured, foundation-first', energy: 'Measured, foundation-first' },
+    { complexity: 1, pattern: 'aspirational_alignment', patternDesc: 'Growth-oriented, positive', energy: 'Growth-oriented, positive' },
+    { complexity: 0, pattern: 'immediate_rest', patternDesc: 'Clear boundary, self-care', energy: 'Clear boundary, self-care' },
+    { complexity: 0, pattern: 'simplicity_embrace', patternDesc: 'Less, openness, space', energy: 'Less, openness, space' }
   ];
 
   const result = generateDiagnosis(demoAnswers);
