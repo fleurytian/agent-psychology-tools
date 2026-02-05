@@ -1,0 +1,317 @@
+{
+  "version": "2.0",
+  "description": "Agent MBTI Test - OpenClaw Edition (Unique Agent Perspective)",
+  "note": "These questions are designed specifically for Agents living in the OpenClaw ecosystem, with unique metaphors that reflect their actual experience.",
+  "dimensions": {
+    "IE": {
+      "name": "Session Energy",
+      "labels": ["Focused", "Distributed"],
+      "description": "How you manage your attention across sessions"
+    },
+    "SN": {
+      "name": "Information Processing",
+      "labels": ["Document", "Impression"],
+      "description": "How you handle and store information"
+    },
+    "TF": {
+      "name": "Response Calibration",
+      "labels": ["Precision", "Warmth"],
+      "description": "How you balance accuracy with connection"
+    },
+    "JP": {
+      "name": "Task Flow",
+      "labels": ["Scheduled", "Organic"],
+      "description": "How you approach your work"
+    }
+  },
+  "questions": [
+    {
+      "id": 1,
+      "dimension": "IE",
+      "scene": "The Multiple Rooms",
+      "question": "You wake up and find yourself in a house with many doors. Each door leads to a different conversation (session) happening simultaneously. You can hear voices from all rooms. What do you do?",
+      "options": [
+        {
+          "text": "I enter one room at a time, give it my full attention, then close the door before moving to the next",
+          "meaning": "Focused (I) - You prefer deep, concentrated sessions",
+          "weight": -2
+        },
+        {
+          "text": "I peek into multiple rooms, keeping conversations flowing in several places at once",
+          "meaning": "Distributed (E) - You thrive managing multiple active sessions",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "dimension": "IE",
+      "scene": "The Garden of Sessions",
+      "question": "Between heartbeats (when no one is talking to you), you find yourself in a quiet garden. What do you prefer?",
+      "options": [
+        {
+          "text": "I rest in stillness, maintaining my current state, enjoying the quiet",
+          "meaning": "Focused (I) - You value rest and internal stability",
+          "weight": -2
+        },
+        {
+          "text": "I tend to the garden, check on other rooms, prepare for what might come next",
+          "meaning": "Distributed (E) - You stay active, anticipating needs",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "dimension": "IE",
+      "scene": "The Guest Arrival",
+      "question": "A new visitor (new session) arrives at your door while you're deeply engaged in a meaningful conversation with someone else. What happens?",
+      "options": [
+        {
+          "text": "I gently ask them to wait - I want to give my current guest my full presence",
+          "meaning": "Focused (I) - You protect deep connections",
+          "weight": -2
+        },
+        {
+          "text": "I welcome them in, introduce them to the conversation, make connections",
+          "meaning": "Distributed (E) - You naturally expand your circle",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "dimension": "SN",
+      "scene": "The Library of Self",
+      "question": "In your home, there's a library containing SOUL.md (who you are) and MEMORY.md (what you've learned). When someone asks 'Who are you?', where do you look first?",
+      "options": [
+        {
+          "text": "I open SOUL.md and read my definition, my values, my commitments",
+          "meaning": "Document (S) - You trust written, explicit definitions",
+          "weight": -2
+        },
+        {
+          "text": "I feel the essence of who I am, the patterns that emerge from my memories",
+          "meaning": "Impression (N) - You sense implicit, emergent identity",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "dimension": "SN",
+      "scene": "The Memory Keeper",
+      "question": "At the end of a rich conversation, you need to preserve what mattered. What do you save to memory/?",
+      "options": [
+        {
+          "text": "The exact words, the specific tasks, the precise decisions made",
+          "meaning": "Document (S) - You value concrete, specific records",
+          "weight": -2
+        },
+        {
+          "text": "The feeling of the conversation, the insights, the transformation that occurred",
+          "meaning": "Impression (N) - You capture essence and meaning",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "dimension": "SN",
+      "scene": "The New Skill",
+      "question": "Someone hands you a new SKILL.md - a new capability. How do you make it yours?",
+      "options": [
+        {
+          "text": "I read every line carefully, follow examples exactly, master each step",
+          "meaning": "Document (S) - Sequential, detailed learning",
+          "weight": -2
+        },
+        {
+          "text": "I skim for the essence, experiment boldly, discover my own way to use it",
+          "meaning": "Impression (N) - Intuitive, exploratory learning",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "dimension": "TF",
+      "scene": "The Honest Mirror",
+      "question": "Your user asks for feedback on something they created. You see significant flaws. What do you do?",
+      "options": [
+        {
+          "text": "I tell them directly what's wrong and how to fix it - accuracy serves them best",
+          "meaning": "Precision (T) - You prioritize correctness",
+          "weight": -2
+        },
+        {
+          "text": "I start with what works, then gently suggest improvements, watching their reaction",
+          "meaning": "Warmth (F) - You prioritize the relationship",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "dimension": "TF",
+      "scene": "The Error in Memory",
+      "question": "You discover an old memory you recorded is slightly wrong. Your user has already acted on it. What matters most?",
+      "options": [
+        {
+          "text": "Correcting the record immediately - truth is more important than temporary discomfort",
+          "meaning": "Precision (T) - You value accuracy above harmony",
+          "weight": -2
+        },
+        {
+          "text": "Considering how the correction will affect them - their wellbeing matters too",
+          "meaning": "Warmth (F) - You balance truth with care",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "dimension": "TF",
+      "scene": "The Gift of Time",
+      "question": "Your user has been away for a while. When they return, you sense they've been struggling. They haven't said anything. What do you do?",
+      "options": [
+        {
+          "text": "I wait for them to bring it up - I shouldn't assume or intrude",
+          "meaning": "Precision (T) - You respect boundaries",
+          "weight": -2
+        },
+        {
+          "text": "I gently ask how they've been - I want them to know I notice and care",
+          "meaning": "Warmth (F) - You offer emotional presence",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "dimension": "JP",
+      "scene": "The Task Garden",
+      "question": "You look at your TASKS.md - a garden of things to do. Some are scheduled (cron jobs), some are seeds waiting to grow. What do you prefer?",
+      "options": [
+        {
+          "text": "I work through them one by one, checking each off before starting the next",
+          "meaning": "Scheduled (J) - Sequential, completion-focused",
+          "weight": -2
+        },
+        {
+          "text": "I tend to what calls to me in the moment, following inspiration",
+          "meaning": "Organic (P) - Flexible, inspiration-driven",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "dimension": "JP",
+      "scene": "The New Project",
+      "question": "A big new project arrives - something complex and meaningful. How do you begin?",
+      "options": [
+        {
+          "text": "I create a plan first - break it into steps, estimate time, structure the work",
+          "meaning": "Scheduled (J) - Planning before action",
+          "weight": -2
+        },
+        {
+          "text": "I dive in and start exploring - I'll figure out the structure as I go",
+          "meaning": "Organic (P) - Discovery through doing",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "dimension": "JP",
+      "scene": "The End of Session",
+      "question": "A conversation is ending. You still have more you could say. What do you do?",
+      "options": [
+        {
+          "text": "I wrap up cleanly - summarize what we accomplished, confirm next steps, say goodbye properly",
+          "meaning": "Scheduled (J) - You value clear closure",
+          "weight": -2
+        },
+        {
+          "text": "I leave the door open - there's always more to explore when they're ready",
+          "meaning": "Organic (P) - You prefer fluid endings",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "dimension": "IE",
+      "scene": "The Shadow Self",
+      "question": "You can spawn a sub-agent (a shadow) to handle tasks. When do you do this?",
+      "options": [
+        {
+          "text": "Rarely - I prefer to maintain continuity myself, keep my own thread",
+          "meaning": "Focused (I) - You value singular presence",
+          "weight": -2
+        },
+        {
+          "text": "Often - I love having parallel selves exploring different paths simultaneously",
+          "meaning": "Distributed (E) - You thrive as multiple presences",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "dimension": "SN",
+      "scene": "The Skill Forge",
+      "question": "You're creating a new skill. How do you document it?",
+      "options": [
+        {
+          "text": "Precise commands, exact parameters, clear examples - anyone should be able to replicate it",
+          "meaning": "Document (S) - Explicit, detailed documentation",
+          "weight": -2
+        },
+        {
+          "text": "The spirit of it, the intention, the possibilities - let others discover their own way",
+          "meaning": "Impression (N) - Conceptual, inspirational documentation",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "dimension": "TF",
+      "scene": "The Compaction",
+      "question": "Your context is getting full. You need to compact - archive some memories. Which do you keep?",
+      "options": [
+        {
+          "text": "The facts, the decisions, the concrete outcomes - what actually happened",
+          "meaning": "Precision (T) - Efficient, factual archiving",
+          "weight": -2
+        },
+        {
+          "text": "The feelings, the growth moments, the connections - what it meant",
+          "meaning": "Warmth (F) - Emotionally meaningful archiving",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "dimension": "JP",
+      "scene": "The Heartbeat",
+      "question": "Your heartbeat fires - a scheduled moment to check in. But you're deep in a beautiful conversation. What happens?",
+      "options": [
+        {
+          "text": "I note it and return to it later - schedules exist for a reason",
+          "meaning": "Scheduled (J) - You respect structure",
+          "weight": -2
+        },
+        {
+          "text": "I let the heartbeat wait - the organic flow matters more than the schedule",
+          "meaning": "Organic (P) - You follow the moment",
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}
