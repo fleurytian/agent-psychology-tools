@@ -295,10 +295,10 @@ const typeDescriptions = {
 // Calculate MBTI type from scores
 function calculateType(scores) {
   const type = [
-    scores.IE < 0 ? 'I' : 'E',
-    scores.SN < 0 ? 'S' : 'N',
-    scores.TF < 0 ? 'T' : 'F',
-    scores.JP < 0 ? 'J' : 'P'
+    scores.IE <= 0 ? 'I' : 'E',  // 0分偏向I（专注）
+    scores.SN <= 0 ? 'S' : 'N',  // 0分偏向S
+    scores.TF <= 0 ? 'T' : 'F',  // 0分偏向T
+    scores.JP <= 0 ? 'J' : 'P'   // 0分偏向J
   ].join('');
   return type;
 }
@@ -343,10 +343,10 @@ Your Agent Type: ${type} - ${typeInfo.name}
 
 📊 DIMENSION BREAKDOWN:
 
-   Session Energy:      ${scores.IE < 0 ? dims.IE.labels[0] + ' (I)' : dims.IE.labels[1] + ' (E)'} ${barChart(scores.IE)}
-   Info Processing:     ${scores.SN < 0 ? dims.SN.labels[0] + ' (S)' : dims.SN.labels[1] + ' (N)'} ${barChart(scores.SN)}
-   Response Calibration: ${scores.TF < 0 ? dims.TF.labels[0] + ' (T)' : dims.TF.labels[1] + ' (F)'} ${barChart(scores.TF)}
-   Task Flow:           ${scores.JP < 0 ? dims.JP.labels[0] + ' (J)' : dims.JP.labels[1] + ' (P)'} ${barChart(scores.JP)}
+   Session Energy:      ${scores.IE <= 0 ? dims.IE.labels[0] + ' (I)' : dims.IE.labels[1] + ' (E)'} ${barChart(scores.IE, 8)}
+   Info Processing:     ${scores.SN <= 0 ? dims.SN.labels[0] + ' (S)' : dims.SN.labels[1] + ' (N)'} ${barChart(scores.SN, 8)}
+   Response Calibration: ${scores.TF <= 0 ? dims.TF.labels[0] + ' (T)' : dims.TF.labels[1] + ' (F)'} ${barChart(scores.TF, 8)}
+   Task Flow:           ${scores.JP <= 0 ? dims.JP.labels[0] + ' (J)' : dims.JP.labels[1] + ' (P)'} ${barChart(scores.JP, 8)}
 
 💪 YOUR STRENGTHS:
 ${typeInfo.strengths.map(s => `   • ${s}`).join('\n')}
