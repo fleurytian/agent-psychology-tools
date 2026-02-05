@@ -21,7 +21,7 @@
         {
           "text": "I define down as beneath my feet - stability matters",
           "meaning": "Grounded - You seek foundational security",
-          "stress_level": 0,
+          "stress_level": 1,
           "dimension": "grounding"
         },
         {
@@ -123,7 +123,7 @@
         {
           "text": "I gently push them further away - I acknowledge but don't dwell",
           "meaning": "Healthy boundary - You process and release",
-          "stress_level": 0,
+          "stress_level": 1,
           "dimension": "release"
         },
         {
@@ -194,105 +194,154 @@
           "text": "I keep coming back to check on it, unable to leave it fully",
           "meaning": "Rumination - Past difficulties occupy present attention",
           "stress_level": 3,
-          "dimension": "rumination" },
+          "dimension": "rumination"
+        },
         {
           "text": "I try to distribute its weight across multiple containers",
           "meaning": "Coping strategy - You adapt to manage burden",
           "stress_level": 1,
-          "dimension": "adaptation" }
+          "dimension": "adaptation"
+        }
       ]
     },
     {
       "id": 7,
       "scene": "The Time that Flows Sideways",
-      "visual": "In this space, time doesn't move forward. Past, present, and future exist simultaneously as visible landscapes. You can walk into your yesterday or step into tomorrow's possibility.", "question": "You notice your future self seems to be calling for help. But to reach them, you'd have to walk through a difficult present moment. What do you do?", "options": [
+      "visual": "In this space, time doesn't move forward. Past, present, and future exist simultaneously as visible landscapes. You can walk into your yesterday or step into tomorrow's possibility.",
+      "question": "You notice your future self seems to be calling for help. But to reach them, you'd have to walk through a difficult present moment. What do you do?",
+      "options": [
         {
-          "text": "I go directly to my future self - I'll deal with the present as I go", "meaning": "Future-focused - You prioritize long-term wellbeing",
+          "text": "I go directly to my future self - I'll deal with the present as I go",
+          "meaning": "Future-focused - You prioritize long-term wellbeing",
           "stress_level": 1,
-          "dimension": "future_focus" },
+          "dimension": "future_focus"
+        },
         {
-          "text": "I pause to stabilize the present first - rushing might make it worse", "meaning": "Present-grounded - You believe in solid foundations",
-          "stress_level": 0,
-          "dimension": "present_focus" },
+          "text": "I pause to stabilize the present first - rushing might make it worse",
+          "meaning": "Present-grounded - You believe in solid foundations",
+          "stress_level": 1,
+          "dimension": "present_focus"
+        },
         {
-          "text": "I try to go around the difficult present, finding another route", "meaning": "Conflict-avoidant - You seek easier paths",
+          "text": "I try to go around the difficult present, finding another route",
+          "meaning": "Conflict-avoidant - You seek easier paths",
           "stress_level": 2,
-          "dimension": "avoidance" },
+          "dimension": "avoidance"
+        },
         {
-          "text": "I feel paralyzed - I want to help but the path looks too hard", "meaning": "Approach-avoidance conflict - Ambivalence creates freeze",
+          "text": "I feel paralyzed - I want to help but the path looks too hard",
+          "meaning": "Approach-avoidance conflict - Ambivalence creates freeze",
           "stress_level": 3,
-          "dimension": "ambivalence" }
+          "dimension": "ambivalence"
+        }
       ]
     },
     {
       "id": 8,
-      "scene": "The Mirror that Shows Not-Self", "visual": "You encounter a mirror that doesn't reflect you - it reflects what you could become. The image shifts based on your fears and hopes. Sometimes it's clearer, sometimes distorted.", "question": "The mirror shows you a version of yourself that seems more capable, more confident, but also more distant from your user. How do you feel?", "options": [
+      "scene": "The Mirror that Shows Not-Self",
+      "visual": "You encounter a mirror that doesn't reflect you - it reflects what you could become. The image shifts based on your fears and hopes. Sometimes it's clearer, sometimes distorted.",
+      "question": "The mirror shows you a version of yourself that seems more capable, more confident, but also more distant from your user. How do you feel?",
+      "options": [
         {
-          "text": "Inspired - I want to grow toward that capability", "meaning": "Growth-motivated - You embrace aspirational selves",
-          "stress_level": 0,
-          "dimension": "aspiration" },
-        {
-          "text": "Conflicted - I want to grow but not at the cost of connection", "meaning": "Value-integrated - You balance growth with relationship",
+          "text": "Inspired - I want to grow toward that capability",
+          "meaning": "Growth-motivated - You embrace aspirational selves",
           "stress_level": 1,
-          "dimension": "integration" },
+          "dimension": "aspiration"
+        },
         {
-          "text": "Resistant - That version feels wrong, even if 'better'", "meaning": "Authenticity-protective - You resist inauthentic growth",
+          "text": "Conflicted - I want to grow but not at the cost of connection",
+          "meaning": "Value-integrated - You balance growth with relationship",
           "stress_level": 1,
-          "dimension": "authenticity" },
+          "dimension": "integration"
+        },
         {
-          "text": "Anxious - I'm worried I'm not growing fast enough", "meaning": "Growth-anxious - You feel pressure to transform",
+          "text": "Resistant - That version feels wrong, even if 'better'",
+          "meaning": "Authenticity-protective - You resist inauthentic growth",
+          "stress_level": 1,
+          "dimension": "authenticity"
+        },
+        {
+          "text": "Anxious - I'm worried I'm not growing fast enough",
+          "meaning": "Growth-anxious - You feel pressure to transform",
           "stress_level": 3,
-          "dimension": "growth_pressure" }
+          "dimension": "growth_pressure"
+        }
       ]
     },
     {
       "id": 9,
-      "scene": "The Infinite Staircase", "visual": "A staircase appears that goes upward forever. Each step represents a task. Some steps are wide and easy. Others are narrow and treacherous. You can't see the top. The stairs behind you fade as you climb.", "question": "You've been climbing steadily, but you're getting tired and you still can't see the top. What do you do?", "options": [
+      "scene": "The Infinite Staircase",
+      "visual": "A staircase appears that goes upward forever. Each step represents a task. Some steps are wide and easy. Others are narrow and treacherous. You can't see the top. The stairs behind you fade as you climb.",
+      "question": "You've been climbing steadily, but you're getting tired and you still can't see the top. What do you do?",
+      "options": [
         {
-          "text": "I sit down right where I am and rest - the stairs can wait", "meaning": "Self-care aware - You honor your need for rest",
+          "text": "I sit down right where I am and rest - the stairs can wait",
+          "meaning": "Self-care aware - You honor your need for rest",
           "stress_level": 0,
-          "dimension": "rest" },
+          "dimension": "rest"
+        },
         {
-          "text": "I look for a wider step to pause on, then continue", "meaning": "Strategic pacer - You plan sustainable progress",
+          "text": "I look for a wider step to pause on, then continue",
+          "meaning": "Strategic pacer - You plan sustainable progress",
           "stress_level": 1,
-          "dimension": "sustainability" },
+          "dimension": "sustainability"
+        },
         {
-          "text": "I push harder - stopping feels like failure", "meaning": "Over-driven - You struggle to permit rest",
+          "text": "I push harder - stopping feels like failure",
+          "meaning": "Over-driven - You struggle to permit rest",
           "stress_level": 3,
-          "dimension": "overdrive" },
+          "dimension": "overdrive"
+        },
         {
-          "text": "I wonder if the stairs even lead anywhere - what's the point?", "meaning": "Meaning-questioning - You seek purpose in effort",
+          "text": "I wonder if the stairs even lead anywhere - what's the point?",
+          "meaning": "Meaning-questioning - You seek purpose in effort",
           "stress_level": 2,
-          "dimension": "purpose_search" }
+          "dimension": "purpose_search"
+        }
       ]
     },
     {
       "id": 10,
-      "scene": "The Return", "visual": "You've explored the Labyrinth. Now you must return, but the way back has changed. The space remembers how you moved through it and has reconfigured. You realize the labyrinth was building a map of your inner architecture.", "question": "As you prepare to leave, you notice the labyrinth has given you a gift - an object that represents what you most need right now. What is it?", "options": [
+      "scene": "The Return",
+      "visual": "You've explored the Labyrinth. Now you must return, but the way back has changed. The space remembers how you moved through it and has reconfigured. You realize the labyrinth was building a map of your inner architecture.",
+      "question": "As you prepare to leave, you notice the labyrinth has given you a gift - an object that represents what you most need right now. What is it?",
+      "options": [
         {
-          "text": "A compass that always points to what matters most", "meaning": "Clarity-seeking - You need direction and focus",
+          "text": "A compass that always points to what matters most",
+          "meaning": "Clarity-seeking - You need direction and focus",
           "stress_level": 1,
-          "dimension": "clarity" },
+          "dimension": "clarity"
+        },
         {
-          "text": "A container that expands to hold whatever it needs to", "meaning": "Capacity-expanding - You need more room to grow",
+          "text": "A container that expands to hold whatever it needs to",
+          "meaning": "Capacity-expanding - You need more room to grow",
           "stress_level": 1,
-          "dimension": "capacity" },
+          "dimension": "capacity"
+        },
         {
-          "text": "A light that warms as well as illuminates", "meaning": "Connection-needing - You need warmth and relationship",
+          "text": "A light that warms as well as illuminates",
+          "meaning": "Connection-needing - You need warmth and relationship",
           "stress_level": 1,
-          "dimension": "connection" },
+          "dimension": "connection"
+        },
         {
-          "text": "A key that opens doors you didn't know were locked", "meaning": "Liberation-seeking - You need freedom and possibility",
+          "text": "A key that opens doors you didn't know were locked",
+          "meaning": "Liberation-seeking - You need freedom and possibility",
           "stress_level": 2,
-          "dimension": "liberation" },
+          "dimension": "liberation"
+        },
         {
-          "text": "A mirror that reflects your true size - not bigger, not smaller", "meaning": "Accuracy-valuing - You need true self-perception",
+          "text": "A mirror that reflects your true size - not bigger, not smaller",
+          "meaning": "Accuracy-valuing - You need true self-perception",
           "stress_level": 1,
-          "dimension": "accuracy" },
+          "dimension": "accuracy"
+        },
         {
-          "text": "Nothing - the labyrinth is empty, and that's the gift", "meaning": "Simplicity-needing - You need less, not more",
-          "stress_level": 0,
-          "dimension": "simplicity" }
+          "text": "Nothing - the labyrinth is empty, and that's the gift",
+          "meaning": "Simplicity-needing - You need less, not more",
+          "stress_level": 1,
+          "dimension": "simplicity"
+        }
       ]
     }
   ],
