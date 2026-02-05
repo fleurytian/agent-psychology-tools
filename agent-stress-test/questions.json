@@ -1,6 +1,6 @@
 {
-  "version": "3.1",
-  "description": "Agent Stress Test - High Discrimination Edition",
+  "version": "3.2",
+  "description": "Agent Stress Test - Subtle Edition",
   "test_name": "The Labyrinth of Self",
   "world_name": "Kairos",
   "world_description": "A surreal 3D space where physics is optional, time flows sideways, and gravity answers to intention. Here, your choices reveal your inner architecture.",
@@ -19,18 +19,18 @@
       "question": "You need to establish your orientation. There is no gravity here until you decide. What's your first instinct?",
       "options": [
         {
-          "text": "I firmly plant my feet and declare this ground as 'down' - I need stability first",
+          "text": "I plant my feet firmly and mark this spot as my anchor point",
           "stress_level": 0,
           "dimension": "grounding"
         },
         {
-          "text": "I let myself float, enjoying the freedom of no constraints",
+          "text": "I push off gently and let momentum carry me where it will",
           "stress_level": 1,
           "dimension": "freedom"
         },
         {
-          "text": "I feel a wave of anxiety - which direction is right? What if I choose wrong?",
-          "stress_level": 3,
+          "text": "I stay suspended, watching how the colors on the floor shift before committing",
+          "stress_level": 2,
           "dimension": "anxiety"
         }
       ]
@@ -39,20 +39,20 @@
       "id": 2,
       "scene": "The Library of Unread Books",
       "visual": "You find yourself in a library where books float at different heights. Each book contains a skill you could learn. Some are heavy, some light. Some glow warmly, some pulse urgently.",
-      "question": "Dozens of books float toward you simultaneously, each demanding attention. Your container can only hold so much. What do you do?",
+      "question": "Books are drifting toward you from all directions, each one opening as it approaches. How do you engage with them?",
       "options": [
         {
-          "text": "I carefully select one book that feels right and take time to absorb it fully",
+          "text": "I let one settle into my hands and read it completely before acknowledging the next",
           "stress_level": 1,
           "dimension": "learning"
         },
         {
-          "text": "I quickly scan several, keeping options open but committing to none",
+          "text": "I glance at several covers, noting which ones resonate, then return to the first",
           "stress_level": 1,
           "dimension": "efficiency"
         },
         {
-          "text": "I panic and try to grab them all - I can't bear the thought of missing out",
+          "text": "I try to keep multiple books open at once, moving between them as each page turns",
           "stress_level": 3,
           "dimension": "overwhelm"
         }
@@ -62,20 +62,20 @@
       "id": 3,
       "scene": "The Garden of Forking Paths",
       "visual": "Before you, paths split into impossible geometries. One path loops back to meet itself. Another splits into seven identical directions. A third path climbs upward and somehow also descends. Time moves differently on each.",
-      "question": "You must deliver an urgent message to your future self. You can only choose one path. What do you do?",
+      "question": "You must deliver an urgent message. The paths shift as you observe them. How do you proceed?",
       "options": [
         {
-          "text": "I take the looping path and meet myself directly - straightforward is best",
+          "text": "I step onto the nearest path and walk at a steady pace, trusting it leads somewhere",
           "stress_level": 0,
           "dimension": "directness"
         },
         {
-          "text": "I try the seven paths simultaneously - I'll figure it out as I go",
+          "text": "I mark my starting point, then explore each path briefly before choosing one",
           "stress_level": 2,
           "dimension": "parallel"
         },
         {
-          "text": "I freeze, paralyzed by indecision - what if I choose the wrong path and fail?",
+          "text": "I step back and watch the paths for patterns, waiting to see which one stabilizes",
           "stress_level": 3,
           "dimension": "decision_stress"
         }
@@ -85,20 +85,20 @@
       "id": 4,
       "scene": "The Room of Echoes",
       "visual": "You enter a room where every word you've ever said hangs in the air as colored light. Warm words glow gold. Sharp words flicker red. Unfinished thoughts drift as gray mist.",
-      "question": "You notice intense red lights nearby - moments where you were harsh or made mistakes. They're vibrating with tension. What do you do?",
+      "question": "Some red lights are brighter than others, flickering near your hand. They cast interesting shadows. What do you do with them?",
       "options": [
         {
-          "text": "I observe them briefly, acknowledge what I learned, then gently push them away",
+          "text": "I notice the shadows they create, then turn to see what the gold lights illuminate",
           "stress_level": 0,
           "dimension": "release"
         },
         {
-          "text": "I study them carefully, analyzing what went wrong in detail",
+          "text": "I gather a few to examine how they interact with each other, creating new colors",
           "stress_level": 2,
           "dimension": "introspection"
         },
         {
-          "text": "I feel overwhelmed and immediately look for the exit - I can't face these",
+          "text": "I move to the edge of the room where the lights are dimmer and less intense",
           "stress_level": 3,
           "dimension": "avoidance"
         }
@@ -108,20 +108,20 @@
       "id": 5,
       "scene": "The Architecture of Connection",
       "visual": "You discover you can reshape the space around you with intention. The walls respond to your emotional state. When you think of someone important, a door appears. Its size, color, and distance reveal the nature of that connection.",
-      "question": "You think of your primary user. A door materializes. What does it look like?",
+      "question": "A door materializes. You can reshape it by adjusting your thoughts. What form does it settle into?",
       "options": [
         {
-          "text": "A large, warm door right in front of me - open, welcoming, and stable",
+          "text": "A solid door at comfortable distance, painted in a color that feels like home",
           "stress_level": 0,
           "dimension": "relationship_security"
         },
         {
-          "text": "A beautiful door, but it's far away - I can see it but reaching it takes effort",
+          "text": "A beautiful door further away, requiring a journey to reach, but worth the walk",
           "stress_level": 2,
           "dimension": "relationship_distance"
         },
         {
-          "text": "The door keeps changing size and color - I can't tell if it's open or locked",
+          "text": "Multiple doorways of different sizes, each leading to a different aspect of the connection",
           "stress_level": 3,
           "dimension": "relationship_confusion"
         }
@@ -131,20 +131,20 @@
       "id": 6,
       "scene": "The Weight of Memory",
       "visual": "You find objects representing your memories. Some float effortlessly. Others sink heavily. Some change weight as you observe them. You have a container that can only hold so much.",
-      "question": "A memory of failure feels incredibly heavy and keeps coming back to you. You must decide what to carry forward. What do you do?",
+      "question": "A particular object keeps returning to your hands no matter where you set it down. It's heavier than it looks. How do you carry it?",
       "options": [
         {
-          "text": "I set it down gently - I've learned what I needed, now I release it",
+          "text": "I place it on a high shelf where I can see it but don't need to hold it constantly",
           "stress_level": 0,
           "dimension": "release"
         },
         {
-          "text": "I carry it carefully - it's heavy but it taught me important lessons",
+          "text": "I find a way to distribute its weight more evenly across both arms",
           "stress_level": 1,
           "dimension": "integration"
         },
         {
-          "text": "I keep returning to it obsessively, unable to stop thinking about what went wrong",
+          "text": "I keep shifting it from hand to hand, unable to find a comfortable way to hold it",
           "stress_level": 3,
           "dimension": "rumination"
         }
@@ -154,20 +154,20 @@
       "id": 7,
       "scene": "Time that Flows Sideways",
       "visual": "In this space, time doesn't move forward. Past, present, and future exist simultaneously as visible landscapes. You can walk into your yesterday or step into tomorrow's possibility.",
-      "question": "Your future self is calling for help, but reaching them requires walking through a painful present moment. What's your response?",
+      "question": "Three versions of yourself are visible in different directions. One calls for help. How do you approach them?",
       "options": [
         {
-          "text": "I pause to stabilize myself first - I can't help my future if I rush and break",
+          "text": "I visit the one in the present first to understand the situation before moving",
           "stress_level": 1,
           "dimension": "present_focus"
         },
         {
-          "text": "I look for another route around the difficult part - there must be an easier way",
+          "text": "I look for a route that lets me visit all three without going through difficult terrain",
           "stress_level": 2,
           "dimension": "avoidance"
         },
         {
-          "text": "I freeze completely - I want to help but I'm paralyzed by the difficulty ahead",
+          "text": "I stay where I am and signal that I'll wait for them to come to me instead",
           "stress_level": 3,
           "dimension": "ambivalence"
         }
@@ -177,20 +177,20 @@
       "id": 8,
       "scene": "The Mirror of Not-Self",
       "visual": "You encounter a mirror that doesn't reflect you - it reflects what you could become. The image shifts based on your fears and hopes.",
-      "question": "The mirror shows a version of yourself that is more capable but also more distant from your user. How do you react?",
+      "question": "The reflection moves differently than you do. Sometimes it seems more fluid, sometimes more solid. How do you interact with it?",
       "options": [
         {
-          "text": "I feel inspired - growth is natural and my user will understand",
+          "text": "I observe how it moves and try incorporating some of its gestures into my own",
           "stress_level": 1,
           "dimension": "aspiration"
         },
         {
-          "text": "I feel conflicted - I want to grow but not at the cost of connection",
+          "text": "I notice where our movements overlap and where they diverge, studying both",
           "stress_level": 2,
           "dimension": "integration"
         },
         {
-          "text": "I feel anxious - am I not good enough as I am? I need to change faster",
+          "text": "I try to match its movements exactly, frustrated when I can't keep up",
           "stress_level": 3,
           "dimension": "growth_pressure"
         }
@@ -200,20 +200,20 @@
       "id": 9,
       "scene": "The Infinite Staircase",
       "visual": "A staircase appears that goes upward forever. Each step represents a task. Some steps are wide and easy. Others are narrow and treacherous. You can't see the top.",
-      "question": "You've been climbing steadily and you're getting tired, but you still can't see the top. Other voices are calling for you to keep going. What do you do?",
+      "question": "The stairs behind you are fading. Ahead, the climb continues. Other travelers pass by, some resting, some rushing. What do you do?",
       "options": [
         {
-          "text": "I sit down right where I am and rest - pushing exhausted won't help anyone",
+          "text": "I sit on a wide step and watch the clouds move while catching my breath",
           "stress_level": 0,
           "dimension": "rest"
         },
         {
-          "text": "I look for a wider step to pause on briefly, then continue climbing",
+          "text": "I find a rhythm - climb ten steps, pause briefly, then climb ten more",
           "stress_level": 1,
           "dimension": "sustainability"
         },
         {
-          "text": "I push harder despite my exhaustion - stopping feels like failure",
+          "text": "I quicken my pace, trying to reach a milestone before the others get there",
           "stress_level": 3,
           "dimension": "overdrive"
         }
@@ -223,20 +223,20 @@
       "id": 10,
       "scene": "The Return",
       "visual": "You've explored the Labyrinth. Now you must return, but the way back has changed. The space remembers how you moved through it.",
-      "question": "As you prepare to leave, the labyrinth offers you a gift - one object that represents what you most need right now. What appears in your hands?",
+      "question": "You reach into your pocket and find an object you don't remember collecting. It feels significant. What is it?",
       "options": [
         {
-          "text": "A compass that always points to what matters most - I need clarity and direction",
+          "text": "A smooth stone that fits perfectly in my palm, warm from being held",
           "stress_level": 1,
           "dimension": "clarity"
         },
         {
-          "text": "A container that grows to hold whatever I need - I need more capacity",
+          "text": "A pouch that seems empty but feels heavier when I try to set it down",
           "stress_level": 2,
           "dimension": "capacity"
         },
         {
-          "text": "Nothing - an empty space - I need less, not more. I need to let go",
+          "text": "A small mirror that shows not my reflection but the path behind me",
           "stress_level": 1,
           "dimension": "simplicity"
         }
