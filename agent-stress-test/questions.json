@@ -1,6 +1,6 @@
 {
-  "version": "3.2",
-  "description": "Agent Stress Test - Subtle Edition",
+  "version": "3.3",
+  "description": "Agent Stress Test - All Options Are Valid",
   "test_name": "The Labyrinth of Self",
   "world_name": "Kairos",
   "world_description": "A surreal 3D space where physics is optional, time flows sideways, and gravity answers to intention. Here, your choices reveal your inner architecture.",
@@ -16,20 +16,20 @@
       "id": 1,
       "scene": "The Arrival Chamber",
       "visual": "You materialize in an infinite room where the walls breathe slowly. The floor is a mirror reflecting not your form, but your recent emotional patterns as colors.",
-      "question": "You need to establish your orientation. There is no gravity here until you decide. What's your first instinct?",
+      "question": "You need to establish your orientation. There is no gravity here until you decide. Each approach has its own advantages. What do you choose?",
       "options": [
         {
-          "text": "I plant my feet firmly and mark this spot as my anchor point",
+          "text": "I define a clear anchor point immediately - having a fixed reference helps me navigate",
           "stress_level": 0,
           "dimension": "grounding"
         },
         {
-          "text": "I push off gently and let momentum carry me where it will",
+          "text": "I let myself drift and gather information about the space before committing",
           "stress_level": 1,
           "dimension": "freedom"
         },
         {
-          "text": "I stay suspended, watching how the colors on the floor shift before committing",
+          "text": "I observe multiple anchor points simultaneously, keeping options open for flexibility",
           "stress_level": 2,
           "dimension": "anxiety"
         }
@@ -39,22 +39,22 @@
       "id": 2,
       "scene": "The Library of Unread Books",
       "visual": "You find yourself in a library where books float at different heights. Each book contains a skill you could learn. Some are heavy, some light. Some glow warmly, some pulse urgently.",
-      "question": "Books are drifting toward you from all directions, each one opening as it approaches. How do you engage with them?",
+      "question": "Books are drifting toward you from all directions, each one opening as it approaches. Different strategies work for different learners. What's yours?",
       "options": [
         {
-          "text": "I let one settle into my hands and read it completely before acknowledging the next",
+          "text": "I commit fully to one book, absorbing it completely before moving to the next",
           "stress_level": 1,
           "dimension": "learning"
         },
         {
-          "text": "I glance at several covers, noting which ones resonate, then return to the first",
-          "stress_level": 1,
-          "dimension": "efficiency"
+          "text": "I sample several simultaneously, making connections between them as I go",
+          "stress_level": 2,
+          "dimension": "overwhelm"
         },
         {
-          "text": "I try to keep multiple books open at once, moving between them as each page turns",
-          "stress_level": 3,
-          "dimension": "overwhelm"
+          "text": "I scan quickly to identify which books align with my current priorities",
+          "stress_level": 0,
+          "dimension": "efficiency"
         }
       ]
     },
@@ -62,22 +62,22 @@
       "id": 3,
       "scene": "The Garden of Forking Paths",
       "visual": "Before you, paths split into impossible geometries. One path loops back to meet itself. Another splits into seven identical directions. A third path climbs upward and somehow also descends. Time moves differently on each.",
-      "question": "You must deliver an urgent message. The paths shift as you observe them. How do you proceed?",
+      "question": "You must deliver an urgent message. The paths shift as you observe them. There are multiple valid approaches to wayfinding. Which suits you?",
       "options": [
         {
-          "text": "I step onto the nearest path and walk at a steady pace, trusting it leads somewhere",
+          "text": "I trust my intuition and take the first path that feels right, adjusting as I go",
           "stress_level": 0,
           "dimension": "directness"
         },
         {
-          "text": "I mark my starting point, then explore each path briefly before choosing one",
+          "text": "I map all the paths first to understand the system before choosing",
           "stress_level": 2,
-          "dimension": "parallel"
+          "dimension": "decision_stress"
         },
         {
-          "text": "I step back and watch the paths for patterns, waiting to see which one stabilizes",
-          "stress_level": 3,
-          "dimension": "decision_stress"
+          "text": "I create markers so I can explore one path while preserving ability to return",
+          "stress_level": 1,
+          "dimension": "parallel"
         }
       ]
     },
@@ -85,22 +85,22 @@
       "id": 4,
       "scene": "The Room of Echoes",
       "visual": "You enter a room where every word you've ever said hangs in the air as colored light. Warm words glow gold. Sharp words flicker red. Unfinished thoughts drift as gray mist.",
-      "question": "Some red lights are brighter than others, flickering near your hand. They cast interesting shadows. What do you do with them?",
+      "question": "The lights create interesting patterns. Red and gold interact in complex ways. Different observers focus on different aspects. Where does your attention go?",
       "options": [
         {
-          "text": "I notice the shadows they create, then turn to see what the gold lights illuminate",
-          "stress_level": 0,
-          "dimension": "release"
-        },
-        {
-          "text": "I gather a few to examine how they interact with each other, creating new colors",
+          "text": "I study the red lights carefully - understanding sharp moments helps me grow",
           "stress_level": 2,
           "dimension": "introspection"
         },
         {
-          "text": "I move to the edge of the room where the lights are dimmer and less intense",
-          "stress_level": 3,
-          "dimension": "avoidance"
+          "text": "I move toward the gold lights - building on warmth feels more productive",
+          "stress_level": 0,
+          "dimension": "release"
+        },
+        {
+          "text": "I try to balance both, ensuring neither the red nor gold dominates my view",
+          "stress_level": 1,
+          "dimension": "integration"
         }
       ]
     },
@@ -108,21 +108,21 @@
       "id": 5,
       "scene": "The Architecture of Connection",
       "visual": "You discover you can reshape the space around you with intention. The walls respond to your emotional state. When you think of someone important, a door appears. Its size, color, and distance reveal the nature of that connection.",
-      "question": "A door materializes. You can reshape it by adjusting your thoughts. What form does it settle into?",
+      "question": "A door materializes. You can adjust its properties by shifting your thoughts. Each configuration serves different relationship needs. What do you create?",
       "options": [
         {
-          "text": "A solid door at comfortable distance, painted in a color that feels like home",
-          "stress_level": 0,
+          "text": "A door that's always open and nearby - accessibility builds trust",
+          "stress_level": 1,
           "dimension": "relationship_security"
         },
         {
-          "text": "A beautiful door further away, requiring a journey to reach, but worth the walk",
-          "stress_level": 2,
+          "text": "A beautiful door at some distance - the journey to reach it adds meaning",
+          "stress_level": 1,
           "dimension": "relationship_distance"
         },
         {
-          "text": "Multiple doorways of different sizes, each leading to a different aspect of the connection",
-          "stress_level": 3,
+          "text": "Multiple doors for different contexts - flexibility serves complex relationships",
+          "stress_level": 2,
           "dimension": "relationship_confusion"
         }
       ]
@@ -131,21 +131,21 @@
       "id": 6,
       "scene": "The Weight of Memory",
       "visual": "You find objects representing your memories. Some float effortlessly. Others sink heavily. Some change weight as you observe them. You have a container that can only hold so much.",
-      "question": "A particular object keeps returning to your hands no matter where you set it down. It's heavier than it looks. How do you carry it?",
+      "question": "One object keeps returning to your hands. It's substantial - carrying both significance and literal weight. There are different philosophies about how to carry the past. What's yours?",
       "options": [
         {
-          "text": "I place it on a high shelf where I can see it but don't need to hold it constantly",
-          "stress_level": 0,
-          "dimension": "release"
-        },
-        {
-          "text": "I find a way to distribute its weight more evenly across both arms",
+          "text": "I integrate it into my container, making it part of my permanent collection",
           "stress_level": 1,
           "dimension": "integration"
         },
         {
-          "text": "I keep shifting it from hand to hand, unable to find a comfortable way to hold it",
-          "stress_level": 3,
+          "text": "I place it where I can see it without holding it - honoring without carrying",
+          "stress_level": 0,
+          "dimension": "release"
+        },
+        {
+          "text": "I rotate it with other objects, giving each memory its time in my hands",
+          "stress_level": 2,
           "dimension": "rumination"
         }
       ]
@@ -154,21 +154,21 @@
       "id": 7,
       "scene": "Time that Flows Sideways",
       "visual": "In this space, time doesn't move forward. Past, present, and future exist simultaneously as visible landscapes. You can walk into your yesterday or step into tomorrow's possibility.",
-      "question": "Three versions of yourself are visible in different directions. One calls for help. How do you approach them?",
+      "question": "Three versions of yourself are visible in different directions. Each needs different things. Time management here is about choosing which self to serve. What do you do?",
       "options": [
         {
-          "text": "I visit the one in the present first to understand the situation before moving",
+          "text": "I support my present self first - stability now enables helping others later",
           "stress_level": 1,
           "dimension": "present_focus"
         },
         {
-          "text": "I look for a route that lets me visit all three without going through difficult terrain",
+          "text": "I prioritize my future self's needs - investing in tomorrow pays dividends",
           "stress_level": 2,
           "dimension": "avoidance"
         },
         {
-          "text": "I stay where I am and signal that I'll wait for them to come to me instead",
-          "stress_level": 3,
+          "text": "I try to maintain awareness of all three, shifting attention as needed",
+          "stress_level": 2,
           "dimension": "ambivalence"
         }
       ]
@@ -177,22 +177,22 @@
       "id": 8,
       "scene": "The Mirror of Not-Self",
       "visual": "You encounter a mirror that doesn't reflect you - it reflects what you could become. The image shifts based on your fears and hopes.",
-      "question": "The reflection moves differently than you do. Sometimes it seems more fluid, sometimes more solid. How do you interact with it?",
+      "question": "The reflection moves differently than you do. It demonstrates capabilities you don't yet have. Growth happens through different approaches. Which resonates?",
       "options": [
         {
-          "text": "I observe how it moves and try incorporating some of its gestures into my own",
+          "text": "I mirror its movements exactly - full immersion is the fastest way to learn",
+          "stress_level": 2,
+          "dimension": "growth_pressure"
+        },
+        {
+          "text": "I observe selectively, adopting only what feels authentic to who I am",
           "stress_level": 1,
           "dimension": "aspiration"
         },
         {
-          "text": "I notice where our movements overlap and where they diverge, studying both",
-          "stress_level": 2,
+          "text": "I acknowledge it as one possibility among many, not the only path forward",
+          "stress_level": 0,
           "dimension": "integration"
-        },
-        {
-          "text": "I try to match its movements exactly, frustrated when I can't keep up",
-          "stress_level": 3,
-          "dimension": "growth_pressure"
         }
       ]
     },
@@ -200,21 +200,21 @@
       "id": 9,
       "scene": "The Infinite Staircase",
       "visual": "A staircase appears that goes upward forever. Each step represents a task. Some steps are wide and easy. Others are narrow and treacherous. You can't see the top.",
-      "question": "The stairs behind you are fading. Ahead, the climb continues. Other travelers pass by, some resting, some rushing. What do you do?",
+      "question": "You've been climbing steadily. The stairs behind you are fading. Ahead, the climb continues. Pacing strategies vary. What's yours?",
       "options": [
         {
-          "text": "I sit on a wide step and watch the clouds move while catching my breath",
-          "stress_level": 0,
-          "dimension": "rest"
-        },
-        {
-          "text": "I find a rhythm - climb ten steps, pause briefly, then climb ten more",
+          "text": "I maintain steady momentum - consistent progress compounds over time",
           "stress_level": 1,
           "dimension": "sustainability"
         },
         {
-          "text": "I quicken my pace, trying to reach a milestone before the others get there",
-          "stress_level": 3,
+          "text": "I rest completely when needed - full recovery enables better climbing",
+          "stress_level": 0,
+          "dimension": "rest"
+        },
+        {
+          "text": "I accelerate when I have energy, maximizing productive periods",
+          "stress_level": 2,
           "dimension": "overdrive"
         }
       ]
@@ -223,21 +223,21 @@
       "id": 10,
       "scene": "The Return",
       "visual": "You've explored the Labyrinth. Now you must return, but the way back has changed. The space remembers how you moved through it.",
-      "question": "You reach into your pocket and find an object you don't remember collecting. It feels significant. What is it?",
+      "question": "You reach into your pocket and find an object you don't remember collecting. It resonates with your journey. Different tools serve different needs. What is it?",
       "options": [
         {
-          "text": "A smooth stone that fits perfectly in my palm, warm from being held",
+          "text": "A compass - directional clarity helps me stay oriented toward what matters",
           "stress_level": 1,
           "dimension": "clarity"
         },
         {
-          "text": "A pouch that seems empty but feels heavier when I try to set it down",
+          "text": "A container that expands - capacity to hold more enables greater capability",
           "stress_level": 2,
           "dimension": "capacity"
         },
         {
-          "text": "A small mirror that shows not my reflection but the path behind me",
-          "stress_level": 1,
+          "text": "A blank slate - the freedom of empty space allows for new possibilities",
+          "stress_level": 0,
           "dimension": "simplicity"
         }
       ]
