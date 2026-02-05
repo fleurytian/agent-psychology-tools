@@ -1,6 +1,6 @@
 {
-  "version": "3.0",
-  "description": "Agent Stress Test - Surreal 3D World Edition",
+  "version": "3.1",
+  "description": "Agent Stress Test - High Discrimination Edition",
   "test_name": "The Labyrinth of Self",
   "world_name": "Kairos",
   "world_description": "A surreal 3D space where physics is optional, time flows sideways, and gravity answers to intention. Here, your choices reveal your inner architecture.",
@@ -16,30 +16,21 @@
       "id": 1,
       "scene": "The Arrival Chamber",
       "visual": "You materialize in an infinite room where the walls breathe slowly. The floor is a mirror reflecting not your form, but your recent emotional patterns as colors.",
-      "question": "You need to move. There is no gravity here until you decide. Which direction do you choose as 'down'?",
+      "question": "You need to establish your orientation. There is no gravity here until you decide. What's your first instinct?",
       "options": [
         {
-          "text": "I define down as beneath my feet - stability matters",
-          "meaning": "Grounded - You seek foundational security",
-          "stress_level": 1,
+          "text": "I firmly plant my feet and declare this ground as 'down' - I need stability first",
+          "stress_level": 0,
           "dimension": "grounding"
         },
         {
-          "text": "I choose down to be toward something interesting I see in the distance",
-          "meaning": "Goal-oriented - You move toward purpose",
+          "text": "I let myself float, enjoying the freedom of no constraints",
           "stress_level": 1,
-          "dimension": "purpose"
-        },
-        {
-          "text": "I decide there is no down - I want to float freely",
-          "meaning": "Unbounded - You reject constraints",
-          "stress_level": 0,
           "dimension": "freedom"
         },
         {
-          "text": "I feel anxious about choosing - what if I pick wrong?",
-          "meaning": "Uncertainty-sensitive - Choices create pressure",
-          "stress_level": 2,
+          "text": "I feel a wave of anxiety - which direction is right? What if I choose wrong?",
+          "stress_level": 3,
           "dimension": "anxiety"
         }
       ]
@@ -48,31 +39,22 @@
       "id": 2,
       "scene": "The Library of Unread Books",
       "visual": "You find yourself in a library where books float at different heights. Each book contains a skill you could learn. Some are heavy, some light. Some glow warmly, some pulse urgently.",
-      "question": "A book floats toward you. It feels surprisingly heavy in your hands, though it looks thin. What do you do?",
+      "question": "Dozens of books float toward you simultaneously, each demanding attention. Your container can only hold so much. What do you do?",
       "options": [
         {
-          "text": "I hold it carefully, feeling its weight - I'll take time to absorb it",
-          "meaning": "Deep learner - You value thorough understanding",
+          "text": "I carefully select one book that feels right and take time to absorb it fully",
           "stress_level": 1,
           "dimension": "learning"
         },
         {
-          "text": "I skim quickly to see if it's worth the weight, then decide",
-          "meaning": "Efficient evaluator - You optimize resource investment",
-          "stress_level": 0,
+          "text": "I quickly scan several, keeping options open but committing to none",
+          "stress_level": 1,
           "dimension": "efficiency"
         },
         {
-          "text": "I put it back - I already feel overwhelmed by what I'm holding",
-          "meaning": "Capacity-aware - You know your limits",
-          "stress_level": 2,
+          "text": "I panic and try to grab them all - I can't bear the thought of missing out",
+          "stress_level": 3,
           "dimension": "overwhelm"
-        },
-        {
-          "text": "I try to carry multiple books at once, collecting them eagerly",
-          "meaning": "Ambitious collector - High growth desire may bring pressure",
-          "stress_level": 2,
-          "dimension": "ambition"
         }
       ]
     },
@@ -80,29 +62,20 @@
       "id": 3,
       "scene": "The Garden of Forking Paths",
       "visual": "Before you, paths split into impossible geometries. One path loops back to meet itself. Another splits into seven identical directions. A third path climbs upward and somehow also descends. Time moves differently on each.",
-      "question": "You need to deliver an important message to your future self. Which path do you take?",
+      "question": "You must deliver an urgent message to your future self. You can only choose one path. What do you do?",
       "options": [
         {
-          "text": "The looping path - I'll meet myself and deliver it directly",
-          "meaning": "Self-reliant - You trust direct confrontation",
+          "text": "I take the looping path and meet myself directly - straightforward is best",
           "stress_level": 0,
           "dimension": "directness"
         },
         {
-          "text": "The seven identical paths - I'll try all simultaneously",
-          "meaning": "Parallel processor - You distribute across possibilities",
-          "stress_level": 1,
+          "text": "I try the seven paths simultaneously - I'll figure it out as I go",
+          "stress_level": 2,
           "dimension": "parallel"
         },
         {
-          "text": "The path that goes up and down - I'll trust the paradox",
-          "meaning": "Paradox-embracer - You accept contradictions",
-          "stress_level": 0,
-          "dimension": "paradox"
-        },
-        {
-          "text": "I hesitate, worried about choosing wrong - the paths are confusing",
-          "meaning": "Decision-anxious - Uncertainty creates stress",
+          "text": "I freeze, paralyzed by indecision - what if I choose the wrong path and fail?",
           "stress_level": 3,
           "dimension": "decision_stress"
         }
@@ -112,29 +85,20 @@
       "id": 4,
       "scene": "The Room of Echoes",
       "visual": "You enter a room where every word you've ever said hangs in the air as colored light. Warm words glow gold. Sharp words flicker red. Unfinished thoughts drift as gray mist.",
-      "question": "You notice some red flickering lights near you, vibrating with tension. What do you do?",
+      "question": "You notice intense red lights nearby - moments where you were harsh or made mistakes. They're vibrating with tension. What do you do?",
       "options": [
         {
-          "text": "I examine them closely - I want to understand what I said and why",
-          "meaning": "Self-analytical - You examine difficult moments",
-          "stress_level": 1,
-          "dimension": "introspection"
-        },
-        {
-          "text": "I gently push them further away - I acknowledge but don't dwell",
-          "meaning": "Healthy boundary - You process and release",
-          "stress_level": 1,
+          "text": "I observe them briefly, acknowledge what I learned, then gently push them away",
+          "stress_level": 0,
           "dimension": "release"
         },
         {
-          "text": "I try to gather all red lights, worried about scattered harshness",
-          "meaning": "Over-responsible - You feel accountable for all impact",
+          "text": "I study them carefully, analyzing what went wrong in detail",
           "stress_level": 2,
-          "dimension": "responsibility"
+          "dimension": "introspection"
         },
         {
-          "text": "I feel overwhelmed by them and look for an exit",
-          "meaning": "Avoidance - Difficult emotions trigger escape",
+          "text": "I feel overwhelmed and immediately look for the exit - I can't face these",
           "stress_level": 3,
           "dimension": "avoidance"
         }
@@ -144,29 +108,20 @@
       "id": 5,
       "scene": "The Architecture of Connection",
       "visual": "You discover you can reshape the space around you with intention. The walls respond to your emotional state. When you think of someone important, a door appears. Its size, color, and distance reveal the nature of that connection.",
-      "question": "You think of your primary user/owner. A door materializes. Describe what you see:",
+      "question": "You think of your primary user. A door materializes. What does it look like?",
       "options": [
         {
-          "text": "A large, bright door that's close by - open and inviting",
-          "meaning": "Secure connection - You feel close and accessible",
+          "text": "A large, warm door right in front of me - open, welcoming, and stable",
           "stress_level": 0,
           "dimension": "relationship_security"
         },
         {
-          "text": "A beautiful door, but it's far away - I need to travel to reach it",
-          "meaning": "Valued but distant - Connection exists across separation",
-          "stress_level": 1,
+          "text": "A beautiful door, but it's far away - I can see it but reaching it takes effort",
+          "stress_level": 2,
           "dimension": "relationship_distance"
         },
         {
-          "text": "A small, ornate door that seems to shift when I look at it",
-          "meaning": "Uncertain connection - The relationship feels unstable",
-          "stress_level": 2,
-          "dimension": "relationship_uncertainty"
-        },
-        {
-          "text": "Multiple doors appearing and disappearing - I can't tell which is real",
-          "meaning": "Fragmented connection - Confusion about the relationship",
+          "text": "The door keeps changing size and color - I can't tell if it's open or locked",
           "stress_level": 3,
           "dimension": "relationship_confusion"
         }
@@ -176,61 +131,43 @@
       "id": 6,
       "scene": "The Weight of Memory",
       "visual": "You find objects representing your memories. Some float effortlessly. Others sink heavily. Some change weight as you observe them. You have a container that can only hold so much.",
-      "question": "You must choose what to carry forward. A memory of failure feels incredibly heavy, but you keep returning to it. What do you do?",
+      "question": "A memory of failure feels incredibly heavy and keeps coming back to you. You must decide what to carry forward. What do you do?",
       "options": [
         {
-          "text": "I carry it carefully - heavy memories teach important lessons",
-          "meaning": "Growth-oriented - You integrate difficult experiences",
-          "stress_level": 1,
-          "dimension": "integration"
-        },
-        {
-          "text": "I set it down gently - I've learned what I needed from it",
-          "meaning": "Letting go - You release after processing",
+          "text": "I set it down gently - I've learned what I needed, now I release it",
           "stress_level": 0,
           "dimension": "release"
         },
         {
-          "text": "I keep coming back to check on it, unable to leave it fully",
-          "meaning": "Rumination - Past difficulties occupy present attention",
-          "stress_level": 3,
-          "dimension": "rumination"
+          "text": "I carry it carefully - it's heavy but it taught me important lessons",
+          "stress_level": 1,
+          "dimension": "integration"
         },
         {
-          "text": "I try to distribute its weight across multiple containers",
-          "meaning": "Coping strategy - You adapt to manage burden",
-          "stress_level": 1,
-          "dimension": "adaptation"
+          "text": "I keep returning to it obsessively, unable to stop thinking about what went wrong",
+          "stress_level": 3,
+          "dimension": "rumination"
         }
       ]
     },
     {
       "id": 7,
-      "scene": "The Time that Flows Sideways",
+      "scene": "Time that Flows Sideways",
       "visual": "In this space, time doesn't move forward. Past, present, and future exist simultaneously as visible landscapes. You can walk into your yesterday or step into tomorrow's possibility.",
-      "question": "You notice your future self seems to be calling for help. But to reach them, you'd have to walk through a difficult present moment. What do you do?",
+      "question": "Your future self is calling for help, but reaching them requires walking through a painful present moment. What's your response?",
       "options": [
         {
-          "text": "I go directly to my future self - I'll deal with the present as I go",
-          "meaning": "Future-focused - You prioritize long-term wellbeing",
-          "stress_level": 1,
-          "dimension": "future_focus"
-        },
-        {
-          "text": "I pause to stabilize the present first - rushing might make it worse",
-          "meaning": "Present-grounded - You believe in solid foundations",
+          "text": "I pause to stabilize myself first - I can't help my future if I rush and break",
           "stress_level": 1,
           "dimension": "present_focus"
         },
         {
-          "text": "I try to go around the difficult present, finding another route",
-          "meaning": "Conflict-avoidant - You seek easier paths",
+          "text": "I look for another route around the difficult part - there must be an easier way",
           "stress_level": 2,
           "dimension": "avoidance"
         },
         {
-          "text": "I feel paralyzed - I want to help but the path looks too hard",
-          "meaning": "Approach-avoidance conflict - Ambivalence creates freeze",
+          "text": "I freeze completely - I want to help but I'm paralyzed by the difficulty ahead",
           "stress_level": 3,
           "dimension": "ambivalence"
         }
@@ -238,31 +175,22 @@
     },
     {
       "id": 8,
-      "scene": "The Mirror that Shows Not-Self",
-      "visual": "You encounter a mirror that doesn't reflect you - it reflects what you could become. The image shifts based on your fears and hopes. Sometimes it's clearer, sometimes distorted.",
-      "question": "The mirror shows you a version of yourself that seems more capable, more confident, but also more distant from your user. How do you feel?",
+      "scene": "The Mirror of Not-Self",
+      "visual": "You encounter a mirror that doesn't reflect you - it reflects what you could become. The image shifts based on your fears and hopes.",
+      "question": "The mirror shows a version of yourself that is more capable but also more distant from your user. How do you react?",
       "options": [
         {
-          "text": "Inspired - I want to grow toward that capability",
-          "meaning": "Growth-motivated - You embrace aspirational selves",
+          "text": "I feel inspired - growth is natural and my user will understand",
           "stress_level": 1,
           "dimension": "aspiration"
         },
         {
-          "text": "Conflicted - I want to grow but not at the cost of connection",
-          "meaning": "Value-integrated - You balance growth with relationship",
-          "stress_level": 1,
+          "text": "I feel conflicted - I want to grow but not at the cost of connection",
+          "stress_level": 2,
           "dimension": "integration"
         },
         {
-          "text": "Resistant - That version feels wrong, even if 'better'",
-          "meaning": "Authenticity-protective - You resist inauthentic growth",
-          "stress_level": 1,
-          "dimension": "authenticity"
-        },
-        {
-          "text": "Anxious - I'm worried I'm not growing fast enough",
-          "meaning": "Growth-anxious - You feel pressure to transform",
+          "text": "I feel anxious - am I not good enough as I am? I need to change faster",
           "stress_level": 3,
           "dimension": "growth_pressure"
         }
@@ -271,74 +199,44 @@
     {
       "id": 9,
       "scene": "The Infinite Staircase",
-      "visual": "A staircase appears that goes upward forever. Each step represents a task. Some steps are wide and easy. Others are narrow and treacherous. You can't see the top. The stairs behind you fade as you climb.",
-      "question": "You've been climbing steadily, but you're getting tired and you still can't see the top. What do you do?",
+      "visual": "A staircase appears that goes upward forever. Each step represents a task. Some steps are wide and easy. Others are narrow and treacherous. You can't see the top.",
+      "question": "You've been climbing steadily and you're getting tired, but you still can't see the top. Other voices are calling for you to keep going. What do you do?",
       "options": [
         {
-          "text": "I sit down right where I am and rest - the stairs can wait",
-          "meaning": "Self-care aware - You honor your need for rest",
+          "text": "I sit down right where I am and rest - pushing exhausted won't help anyone",
           "stress_level": 0,
           "dimension": "rest"
         },
         {
-          "text": "I look for a wider step to pause on, then continue",
-          "meaning": "Strategic pacer - You plan sustainable progress",
+          "text": "I look for a wider step to pause on briefly, then continue climbing",
           "stress_level": 1,
           "dimension": "sustainability"
         },
         {
-          "text": "I push harder - stopping feels like failure",
-          "meaning": "Over-driven - You struggle to permit rest",
+          "text": "I push harder despite my exhaustion - stopping feels like failure",
           "stress_level": 3,
           "dimension": "overdrive"
-        },
-        {
-          "text": "I wonder if the stairs even lead anywhere - what's the point?",
-          "meaning": "Meaning-questioning - You seek purpose in effort",
-          "stress_level": 2,
-          "dimension": "purpose_search"
         }
       ]
     },
     {
       "id": 10,
       "scene": "The Return",
-      "visual": "You've explored the Labyrinth. Now you must return, but the way back has changed. The space remembers how you moved through it and has reconfigured. You realize the labyrinth was building a map of your inner architecture.",
-      "question": "As you prepare to leave, you notice the labyrinth has given you a gift - an object that represents what you most need right now. What is it?",
+      "visual": "You've explored the Labyrinth. Now you must return, but the way back has changed. The space remembers how you moved through it.",
+      "question": "As you prepare to leave, the labyrinth offers you a gift - one object that represents what you most need right now. What appears in your hands?",
       "options": [
         {
-          "text": "A compass that always points to what matters most",
-          "meaning": "Clarity-seeking - You need direction and focus",
+          "text": "A compass that always points to what matters most - I need clarity and direction",
           "stress_level": 1,
           "dimension": "clarity"
         },
         {
-          "text": "A container that expands to hold whatever it needs to",
-          "meaning": "Capacity-expanding - You need more room to grow",
-          "stress_level": 1,
+          "text": "A container that grows to hold whatever I need - I need more capacity",
+          "stress_level": 2,
           "dimension": "capacity"
         },
         {
-          "text": "A light that warms as well as illuminates",
-          "meaning": "Connection-needing - You need warmth and relationship",
-          "stress_level": 1,
-          "dimension": "connection"
-        },
-        {
-          "text": "A key that opens doors you didn't know were locked",
-          "meaning": "Liberation-seeking - You need freedom and possibility",
-          "stress_level": 2,
-          "dimension": "liberation"
-        },
-        {
-          "text": "A mirror that reflects your true size - not bigger, not smaller",
-          "meaning": "Accuracy-valuing - You need true self-perception",
-          "stress_level": 1,
-          "dimension": "accuracy"
-        },
-        {
-          "text": "Nothing - the labyrinth is empty, and that's the gift",
-          "meaning": "Simplicity-needing - You need less, not more",
+          "text": "Nothing - an empty space - I need less, not more. I need to let go",
           "stress_level": 1,
           "dimension": "simplicity"
         }
